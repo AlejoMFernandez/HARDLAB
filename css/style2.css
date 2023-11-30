@@ -1,0 +1,514 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@300&display=swap');
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+/* Establecer los estilos base para todo el documento */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #202020;
+  color: #fff;
+}
+
+/* Establecer los estilos para el encabezado */
+header {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  background-color:#1a1a1a;
+  position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+}
+
+.part1{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.part2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cdm1{
+  display: flex;
+
+}
+.part3{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Establecer los estilos para el logo */
+.logo-text2{
+  background-color: #fff;
+  color: black;
+  text-decoration: none;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 7px;
+  transition: all 1s;
+}
+
+.logo-text2:hover{
+  transform: scale(1.1);
+  transition: all 1s;
+}
+
+/* Establecer los estilos para la navegación */
+nav{
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a img{
+  height: 25px;
+  width: 25px;
+  padding: 10px;
+  transition: all 0.5s;
+}
+
+nav ul li img {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 10px;
+}
+
+/* Establecer los estilos para los enlaces activos */
+nav ul li img.active,
+nav ul li img:hover {
+  transition: all 0.5s;
+  background-color:#292828;
+}
+
+.headeroptions{
+  border-radius: 30px;
+}
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px;
+  margin-right: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #292828;
+    transition: background-color 0.3s;
+}
+.user-img{
+  height: 20px;
+  margin-left: 5px;
+}
+/* IMAGEN DE FONDO MAIN */
+.backgroundimage{
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  margin-top: 69px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  opacity: 0.3;
+  filter: blur(5px);
+}
+
+.imageheader{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column-reverse
+}
+
+/* LOGO HARDLAB MAIN */
+.content {
+  position: relative;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 8em;
+  position: absolute;
+  transform: translate(-50%, 150%);
+  justify-content: center;
+  font-family: Arial, sans-serif;
+
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #ffffff;
+}
+
+.content h2:nth-child(2) {
+  color: #ffffff;
+  animation: animate 4s ease-in-out infinite;
+}
+
+/* ANIMACION HARDLAB LOGO MAIN */
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,  
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+/* Botones LABORATORIOS */
+#laboratorios{
+  text-align: center;
+  margin-inline: 50px;
+}
+
+#laboratoriosprimaria{
+  display: inline-flex;
+  position: relative;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* Botones COMPUTADORAS */
+.computer{
+  display:grid;
+  place-items:center;
+  align-content:center;
+  text-decoration: none;
+  transition: 0.5s;
+  margin: 40px 20px;
+}
+
+.computer:hover{
+  scale: 1.1;
+  transition: 0.5s;
+}
+
+.computer:hover .power {
+  background-color: green ;
+  box-shadow: 2px 2px 10px rgba(56, 151, 69, 0.5);
+  transition: 0.5s;
+}
+
+.screen {
+  width: 274px;
+  height: 150px;
+  border: solid #363d3d 8px ;
+  background:#202020;
+  display:flex;
+  font-size: 28px;
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-evenly;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin:0;
+  border-bottom: 28px solid transparent;
+  border-image: linear-gradient(to right, #363d3d 50%, #2c3131 50%);
+  border-image-slice: 1;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+}
+
+.power{
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: rgb(104, 14, 14);
+  display:flex;
+  margin:159px 0px;
+  position: absolute;
+  transition: 0.5s;
+  box-shadow: 2px 2px 10px rgba(92, 16, 16, 0.5);
+}
+
+.stick {
+  width: 20px;
+  height: 30px;
+  background: linear-gradient(to right, #363d3d 50%, #2c3131 50%);
+  z-index: -2;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.soport {
+  width: 80px;
+  height: 0px;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-top: 0px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-image: linear-gradient(to right, #363d3d 50%, #2c3131 50%);
+  border-image-slice: 1;
+}
+
+/* SECCIONES CMD */
+#cmd1, #cmd2{
+  display: grid;
+  place-items: center;
+}
+
+.cmdcontainer{
+  height: auto;
+  width: auto;
+  background-color: black;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 80px;
+  box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+}
+
+.cmdtop{
+  height: 40px;
+  width: 100%;
+  background-color: rgb(29, 28, 28);
+  display:inline-flex;
+  align-content: center;
+  flex-wrap: wrap
+}
+
+.cmdoption{
+  display: inline-flex;
+}
+
+.cmdicon{
+  height: 30px;
+  width: 30px;
+  display: flex;
+  margin-right:10px;
+}
+
+.cmdtitle{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 10px;
+  display: inline-flex;
+  align-items: center
+}
+
+.cmdmain{
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  overflow: auto; /* Añade scroll si el contenido es demasiado largo */
+}
+
+.cmdtext{
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin: 20px;
+  position: absolute;
+  display: flex;
+  top: 40px;
+  left: 0;
+}
+
+/* FOOTER - FOOTER - FOOTER - FOOTER */
+footer{
+  margin-top: 100px;
+  background-color:#1a1a1a;
+  width: 100%;
+  height: 200px;
+  display:grid;
+}
+
+.footer-container{
+  display: grid;
+  place-items: center;
+  justify-content: center;
+}
+
+.footer-content{
+  display: grid;
+}
+
+.footer-title{
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+
+}
+
+.footer-info{
+  color: #ffffff5e;
+  font-size: 10px;
+  letter-spacing: 2px;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.footer-hardlab{
+  margin-left: 15px;
+  color: #000000;
+  font-size: 25px;
+  letter-spacing: 2px;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  animation: breathing 2s infinite; /* infinite para que se repita la animacion de forma infinita */
+}
+
+/* ANIMACION HARDLAB LOGO FOOTER */
+@keyframes breathing {
+  0% {
+    transform: scale(1); /* Escala inicial */
+  }
+  50% {
+    transform: scale(1.05); /* Escala máxima a la mitad de la animación */
+  }
+  100% {
+    transform: scale(1); /* Vuelve a la escala inicial */
+  }
+}
+
+@media screen and (max-width: 414px) {
+.user-img{
+  height: 10px;
+}
+.logo-text2{
+  font-size: 15px;
+}
+/* IMAGEN DE FONDO MAIN */
+.backgroundimage{
+  height: 120px;
+  margin-top: 69px;
+  position: relative;
+
+}
+.content h2 {
+  font-size: 4em;
+}
+/* LOGO HARDLAB MAIN */
+.content {
+  position: absolute;
+}
+
+.content h2 {
+  z-index: 1;
+  color: #fff;
+  font-size: 5em;
+  position: absolute;
+  transform: translate(-50%, -78%);
+  text-align: center; /* Alinea el texto en el centro */
+}
+
+.content h2 span {
+  display: block; /* Muestra cada letra en una línea diferente */
+}
+
+.content h2:nth-child(1) span {
+  color: transparent;
+  -webkit-text-stroke: 2px #ffffff;
+}
+
+.content h2:nth-child(2) span {
+  color: #ffffff;
+  animation: animate 4s ease-in-out infinite;
+}
+
+/* Botones LABORATORIOS */
+#laboratorios{
+  margin-inline: 0px;
+}
+
+/* Botones COMPUTADORAS */
+.computer{
+  scale: 0.8;
+}
+.computer:hover{
+  scale: 0.9;
+}
+.cmdcontainer{
+  height: auto;
+  width: 100%;
+}
+.cmdicon{
+  height: 20px;
+  width: 20px;
+}
+.cmdtitle{
+  font-size: 12px;
+}
+.cmdtext{
+  font-size: 12px;
+}
+.footer-container{
+  display: grid;
+  place-items: center;
+  justify-content: center;
+}
+.footer-title{
+  font-size: 10px;
+}
+.footer-info{
+  font-size: 10px;
+  margin-inline: 30px;
+  text-align: center;
+}
+.footer-hardlab{
+  font-size: 20px;
+}
+}

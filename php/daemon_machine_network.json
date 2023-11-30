@@ -1,0 +1,12 @@
+
+{
+    "PARAMETROS": {
+        "host": "shotgun.mundolococgi.com",
+        "port": 3307,
+        "dbname": "murialdo",
+        "user": "root",
+        "password": "",
+        "tabla_destino": "workstations",
+        "laboratorio": "testt"
+    }
+}

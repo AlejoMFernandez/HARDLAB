@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="stylecalendario.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <script src="script.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <div class="part1">
+            <a class="logo-text2" href="#">HARDLAB</a>
+        </div>
+        <div class="part2">
+            <nav class="headeroptions">
+                <ul>
+                    <li><a href="#cmd1"><img src="../images/homefull.png" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="part3">
+            <a class="login-btn" href="login.php">Iniciar sesión</a>
+        </div>
+	</header>
+    <section class="main">
+        <div class="container">
+            <div class="box-calendar">
+                <div class="calendar">
+                    <div class="top">
+                        <button class="left" id="prevMonth"><img class="flecha-img" src="flecha-izquierda.png" alt=""></button>
+                        <div class="month" id="currentDate"></div>
+                        <button class="right" id="nextMonth"><img class="flecha-img" src="flecha-derecha.png"></button>
+                    </div>
+                    <div class="calendar-grilla">
+                        <div class="grilla-top" >
+                            <div class="day-name">Dom</div>
+                            <div class="day-name">Lun</div>
+                            <div class="day-name">Mar</div>
+                            <div class="day-name">Mie</div>
+                            <div class="day-name">Jue</div>
+                            <div class="day-name">Vie</div>
+                            <div class="day-name">Sab</div>
+                        </div>
+                        <div class="grilla-bot">
+                            <div class="days" id="calendarDays"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

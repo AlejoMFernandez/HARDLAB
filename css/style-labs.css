@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@300&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+/* Establecer los estilos base para todo el documento */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Abel', sans-serif;
+  background-color: #202020;
+  color: #fff;
+}
+
+/* Establecer los estilos para el encabezado */
+header {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    background-color:#1a1a1a;
+    position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+}
+
+/* Establecer los estilos para el logo */
+.logo-text2{
+    background-color: #fff;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 7px;
+    transition: all 1s;
+    
+}
+  
+.logo-text2:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+}
+
+/* Establecer los estilos para la navegación */
+  nav{
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a img{
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    transition: all 0.5s;
+  
+  }
+  
+  nav ul li img {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 10px;
+  }
+  
+/* Establecer los estilos para los enlaces activos */
+nav ul li img.active,
+nav ul li img:hover {
+    transition: all 0.5s;
+    background-color:#292828;
+}
+
+.headeroptions{
+    border-radius: 30px;
+}
+  
+.login-btn {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+.login-btn:hover {
+    background-color: #292828;
+    transition: background-color 0.3s;
+}
+.user-img{
+    height: 20px;
+    margin-left: 5px;
+}
+.part1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+  
+.part2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.part3{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* APPS - PLANO */
+.container{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 45% 55%;
+}       
+
+/* APPS */
+.left{
+    display: grid;
+    place-items: center;
+    align-items: center;
+}
+
+.cmd{
+    background-color: black;
+    width: 600px;
+    height: auto;
+    border-top: solid 40px rgb(29, 28, 28);
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+}
+
+.apps-match,
+.apps-not{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px 0px;
+    padding-bottom: 60px;
+    margin-inline: 10px;
+    place-items: center;
+}
+
+.apps-not img{
+    filter: grayscale(100%);
+} 
+
+.cmdtitle{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    position:relative;
+    top:-35px;
+    
+}
+
+.cmdicon{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    margin-right:10px;
+}
+
+input[type="search"]{
+    border: #1a1a1a;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.apps-grilla{
+    position: static;
+    width: 100%;
+    height: 100%;
+}
+
+.apps-match img,
+.apps-not img{
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: background-color 1s ease, transform 1s ease; /* Establece el tiempo de duración de la transición y la función de aceleración (ease) */
+}
+
+/* CSS */
+.highlight {
+    background-color: rgba(82, 82, 77, 0.63);
+    transition: background-color 2s ease, transform 1s ease; /* Establece el tiempo de duración de la transición y la función de aceleración (ease) */
+    transform: scale(1.1); /* Asegura que la escala sea normal por defecto */
+}
+
+.right{
+    display: grid;
+    place-items: center;
+    align-items: center;
+}
+
+.plane-description{
+    display: inline-flex;
+}
+
+.plane{
+    width: 700px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    display: grid;
+    place-items: center;
+    align-items: center;
+    z-index: 2;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    position: relative;
+}
+
+.planeimg{
+    width: 90%;
+    height: 90%;
+    opacity: 85%;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    animation: rebote 0.4s ease-in-out forwards;
+    position: absolute;
+}
+
+.description{
+    display: grid;
+    place-items: center;
+    align-items: center;
+}
+
+.items{
+    width: 190px;
+    height: 400px;
+    background-color: #1b1a1a;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 1;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+    display: grid;
+    align-items: center;
+}
+
+.plane-info{
+
+}
+
+.plane-info .item img{
+    width: 40px;
+    height: 40px;
+}
+
+.item{
+    display: inline-flex;
+    margin-block: 14px;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.info-letters{
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    max-width: 100%;
+}
+
+
+@keyframes rebote {
+    0% {
+        top: 0; /* Comienza desde la parte superior del contenedor */
+    }
+    33% {
+        top: 10%; /* Caerá hasta la mitad del contenedor */
+    }
+    66% {
+        top: 3%; /* Rebote hacia arriba ligeramente */
+    }
+    100% {
+        top: 5%; /* Rebote hacia arriba ligeramente */
+    }
+
+}
+
+
+.tabla{
+    display: grid;
+    place-items: center;
+}
+
+.tabla table{
+    width: 90%; /* Ajusta el ancho de la tabla según tus necesidades */
+    border-collapse: collapse; /* Fusionar bordes de las celdas */
+    margin-block: 40px;
+}
+
+.table-top {
+    margin-bottom: 10px;
+    
+}
+
+.table-top tr th{
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    background-color: #1D1C1C;
+}
+
+.tabla th,
+.tabla td {
+  text-align: center; /* Centrar el contenido horizontalmente */
+  vertical-align: middle; /* Centrar el contenido verticalmente */
+  padding: 8px; /* Espaciado interno para las celdas */
+}
+
+.table-info tr th{
+    background-color: #292828;
+    margin-top: 10px;
+}
+
+th .status{
+    width: 100%;
+    height: 100%;
+}
+
+.status{
+    display: grid;
+    justify-content: end;
+}
+
+#status1{
+    width:10px;
+    height:10px;
+    border-radius:100%;
+    background-color:green;
+}
+
+#status2{
+    width:10px;
+    height:10px;
+    border-radius:100%;
+    background-color:red;
+    align-items: center; /* Centrar el contenido horizontalmente */
+    vertical-align: middle; /* Centrar el contenido verticalmente */
+}
+
+.cmd-list{
+    display: grid;
+    place-items: center;
+}
+
+.cmdcontainer-list{
+    width: 90%;
+    background-color: black;
+    position: relative;
+    margin-top: 80px;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+}
+
+.cmdtop-list{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(29, 28, 28);
+    display:inline-flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.cmdoption-list{
+    display: inline-flex;
+}
+
+.cmdicon-list{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    margin-right:10px;
+}
+
+.searcher{
+    position: relative; 
+    top: -45px;
+    right: -220px; 
+    color:#fff; 
+    background-color:#1e1e1e; 
+    padding:5px;
+}
+
+.cmdtitle-list{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.cmdmain-list{
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    overflow: auto; /* Añade scroll si el contenido es demasiado largo */
+}
+
+.cmdtext-list{
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 20px;
+    position: absolute;
+    display: flex;
+    top: 50px;
+}
+
+/* FOOTER - FOOTER - FOOTER - FOOTER */
+footer{
+    margin-top: 100px;
+    background-color:#1a1a1a;
+    width: 100%;
+    height: 200px;
+    display:grid;
+  }
+  
+.footer-container{    
+    display: grid;
+    place-items: center;
+    justify-content: center;
+}
+  
+.footer-content{
+    display: grid;
+}
+  
+.footer-title{
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    text-transform: uppercase; 
+}
+  
+.footer-info{
+    color: #ffffff5e;
+    font-size: 12px;
+    letter-spacing: 2px;
+    align-items: center;
+    text-transform: uppercase;
+}
+  
+.footer-hardlab{
+    margin-left: 15px;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 2px;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    animation: breathing 2s infinite; /* infinite para que se repita la animacion de forma infinita */
+}
+
+/* ANIMACION HARDLAB LOGO FOOTER */
+@keyframes breathing {
+    0% {
+        transform: scale(1); /* Escala inicial */
+    }
+    50% {
+        transform: scale(1.05); /* Escala máxima a la mitad de la animación */
+    }
+    100% {
+        transform: scale(1); /* Vuelve a la escala inicial */
+    }
+}
+
+@media screen and (max-width: 1366px) {
+
+    .description{
+        display: none;
+    }
+    .cmd{
+        width: 500px;
+    }
+    .apps-match, .apps-not {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .searcher{
+        right: -120px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .user-img{
+        height: 10px;
+    }
+    .searcher{
+        width: 110px;
+        right: -80px;
+    }
+    .apps-match, .apps-not{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .container{
+        width: 100%;
+        display: block;
+    }  
+    .planeimg{
+        height: auto;
+    }
+    .left, .right{
+        margin-bottom: 50px;
+    }
+    .cmdcontainer-list{
+        margin-top: 0px;
+        width: 414px;
+    }
+    main{
+        width: 100%;
+        display: grid;
+        place-content: center;
+    }
+    .cmd{
+        width: 414px;
+    }
+    .apps-match img, .apps-not img{
+        width: 50px;
+        height: 50px;
+    }
+    .plane{
+        width: 414px;
+        height: 280px;
+    }
+    .description{
+        display: none;
+    }
+    .logo-text2 {
+        font-size: 15px;
+    }
+    .login-btn{
+        margin-right: 30px;
+        font-size: 10px;
+        display: grid;    
+    }
+}

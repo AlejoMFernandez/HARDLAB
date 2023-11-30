@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.calendar {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    padding: 10px;
+}
+
+.day-name {
+    font-weight: bold;
+}
+
+.day {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.current-day {
+    background-color: #007BFF;
+    color: #fff;
+}

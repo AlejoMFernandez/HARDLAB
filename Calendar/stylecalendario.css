@@ -1,0 +1,249 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+/* Establecer los estilos base para todo el documento */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #202020;
+    color: #fff;
+}
+
+/* Establecer los estilos para el encabezado */
+header {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    background-color:#1a1a1a;
+    position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+}
+  
+.part1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+  
+.part2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.part3{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Establecer los estilos para el logo */
+.logo-text2{
+    background-color: #fff;
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 7px;
+    transition: all 1s;
+}
+  
+.logo-text2:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+}
+  
+/* Establecer los estilos para la navegación */
+nav{
+    display: flex;
+    justify-content: center;
+}
+  
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+nav ul li a img{
+    height: 25px;
+    width: 25px;
+    padding: 10px;
+    transition: all 0.5s;
+}
+  
+nav ul li img {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 10px;
+}
+  
+/* Establecer los estilos para los enlaces activos */
+nav ul li img.active,
+nav ul li img:hover {
+    transition: all 0.5s;
+    background-color:#292828;
+}
+  
+.headeroptions{
+    border-radius: 30px;
+}
+  
+.login-btn {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px;
+    margin-right: 20px;
+    transition: all 0.3s ease-in-out;
+}
+  
+.login-btn:hover {
+    background-color: #fff;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.main {
+    margin-top:65px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    place-items: center;
+}
+.box-calendar {
+    margin-block: 50px;
+    width: 500px;
+    height: 500px;
+    background-color: #1a1a1a;
+    box-shadow: 5px 5px 20px 5px black;
+    display: grid;
+    place-items: center;
+}
+.calendar{
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-rows: 50px 400px;
+    place-items: center;
+}
+.top {
+    width: 360px;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 20% 10% 40% 10% 20%;
+    margin:0;
+}
+.left {
+    grid-column: 2/3;
+    display: grid;
+    place-items: center;
+    transition: all 0.5s;
+    height: 100%;
+    background-color: #1a1a1a;
+    border: 0;
+    border-radius: 100%;
+}
+#currentDate {
+    grid-column: 3/4;
+    display: grid;
+    place-items: center;
+    text-align: center; /* Agrega esta propiedad */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    height: 100%;
+}
+.right {
+    grid-column: 4/5;
+    display: grid;
+    place-items: center;
+    transition: all 0.5s;
+    height: 100%;
+    background-color: #1a1a1a;
+    border: 0;
+    border-radius: 100%;
+}
+.flecha-img{
+    width: 20px;
+    height: 20px;
+}
+.left:hover,
+.right:hover{
+    background-color: #292828;
+    transition: all 0.5s;
+}
+.calendar-grilla {
+    display: grid;
+    grid-template-rows: 50px auto;
+    height: 100%;
+    width: 100%;
+}
+.grilla-top {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    align-items: end;
+    justify-items: center;
+}
+.grilla-bot {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    align-items: center;
+    justify-items: center;
+}
+#calendarDays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Esto crea 7 columnas iguales */
+    gap: 5px; /* Espacio entre los elementos, ajusta según tus preferencias */
+    justify-items: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    height: 100%;
+    width: 100%;
+}
+
+.day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 70%;
+    border-radius: 100%;
+    transition: background-color 0.5s;
+}
+.day:hover{
+    background-color: #202020;
+    transition: background-color 0.5s;
+}
